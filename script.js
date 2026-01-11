@@ -11,32 +11,45 @@ updateTime();
 setInterval(updateTime, 60000);
 
 // ---------------- SPOTIFY via LANYARD ----------------
-const DISCORD_ID = "934340360610652180"; // string
+const DISCORD_ID = "934340360610652180"; // your Discord ID
+const API_KEY = "608730918dd448bd45298bc95c31e44f"; // your Lanyard API key
 
-async function loadSpotify() {
+async function loadLanyard() {
   try {
-    const res = await fetch('https://api.lanyard.rest/v1/users/934340360610652180');
+    const res = await fetch(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`, {
+      headers: {
+        "Authorization": API_KEY
+      }
+    });
     const data = await res.json();
-    const el = document.getElementById("spotify");
 
-    if (!data.data.spotify) {
-      el.innerHTML = `<i class="fas fa-music"></i><p>Not listening to anything</p>`;
-      return;
+    // Discord status
+    const statusEl = document.getElementById("discord-status");
+    statusEl.textContent = `Status: ${data.data.discord_status}`;
+
+    // Spotify
+    const spotifyEl = document.getElementById("spotify");
+    if (data.data.spotify) {
+      const s = data.data.spotify;
+      spotifyEl.innerHTML = `
+        <img src="${s.album_art_url}" width="48" style="border-radius:8px">
+        <div>
+          <strong>${s.song}</strong><br>
+          <span style="color:#9ca3af">${s.artist}</span>
+        </div>
+      `;
+    } else {
+      spotifyEl.innerHTML = `<i class="fas fa-music"></i><p>Not listening to anything</p>`;
     }
 
-    const s = data.data.spotify;
-    el.innerHTML = `
-      <img src="${s.album_art_url}" width="48" style="border-radius:8px">
-      <div>
-        <strong>${s.song}</strong><br>
-        <span style="color:#9ca3af">${s.artist}</span>
-      </div>
-    `;
+    // KV example
+    console.log("KV Store:", data.data.kv);
+
   } catch (err) {
     console.error(err);
-    document.getElementById("spotify").innerHTML = `<p>Error loading Spotify</p>`;
   }
 }
 
-loadSpotify();
-setInterval(loadSpotify, 5000);
+// Run the function
+loadLanyard();
+setInterval(loadLanyard, 5000); // refresh every 5s
