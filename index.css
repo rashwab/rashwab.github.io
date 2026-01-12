@@ -15,8 +15,10 @@
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: "Poppins", sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
 }
+
 
 .container {
   max-width: 1100px;
@@ -24,42 +26,54 @@ body {
   padding: 24px;
 }
 
-/* NAV */
+/* ---------------- NAVBAR ---------------- */
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  gap: 60px;               /* space between logo and links */
   margin-bottom: 40px;
+  flex-wrap: wrap;         /* wrap on smaller screens */
 }
 
 .logo {
   font-weight: 600;
+  font-size: 24px;
 }
 
 .nav-links {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
   color: var(--muted);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
   color: var(--text);
 }
 
-/* MAIN */
+/* ---------------- MAIN ---------------- */
 .main {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 24px;
 }
 
-/* PROFILE CARD */
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------- PROFILE CARD ---------------- */
 .profile-card {
   background: var(--card);
   padding: 32px;
@@ -102,18 +116,20 @@ body {
 .socials {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .socials a {
   color: var(--muted);
   font-size: 18px;
+  transition: color 0.3s;
 }
 
 .socials a:hover {
   color: var(--text);
 }
 
-/* WIDGET */
+/* ---------------- WIDGET ---------------- */
 .widget-card {
   background: var(--card);
   padding: 24px;
@@ -138,17 +154,77 @@ body {
   color: var(--muted);
 }
 
-/* FOOTER */
+/* ---------------- FOOTER ---------------- */
 .footer {
-  margin-top: 60px;
   text-align: center;
-  font-size: 13px;
+  margin-top: 40px;
   color: var(--muted);
+  font-size: 14px;
 }
 
-/* RESPONSIVE */
+/* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 768px) {
-  .main {
-    grid-template-columns: 1fr;
+  .navbar {
+    gap: 20px;
+    flex-direction: column;
   }
+
+  .nav-links {
+    gap: 16px;
+  }
+}
+
+.projects-section h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.projects-section p {
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 35px rgba(0,0,0,0.1);
+}
+
+.project-card h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.project-links a {
+  margin-right: 16px;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.project-links a:hover {
+  color: #1ed760; /* brighter green */
+}
+
+.project-links i {
+  margin-right: 6px;
 }

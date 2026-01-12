@@ -16,7 +16,7 @@ const API_KEY = "608730918dd448bd45298bc95c31e44f"; // your Lanyard API key
 
 async function loadLanyard() {
   try {
-    const res = await fetch(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`, {
+    const res = await fetch(`https://api.lanyard.rest/v1/users/${934340360610652180}`, {
       headers: {
         "Authorization": API_KEY
       }
