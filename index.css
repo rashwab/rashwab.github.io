@@ -228,3 +228,29 @@ body {
 .project-links i {
   margin-right: 6px;
 }
+.about-card {
+    background: var(--card);
+    padding: 32px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+}
+
+.about-card h1, .about-card h2 {
+    margin-bottom: 16px;
+}
+
+.about-card ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    margin-top: 24px;
+    max-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 16px;
+    border: 2px solid var(--accent);
+}
