@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects — Rasheed</title>
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rasheed — Frontend Dev</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
   <div class="container">
@@ -23,28 +35,43 @@
     <!-- MAIN CONTENT -->
     <main class="main">
 
-      <section class="projects-section">
-        <h1>Projects</h1>
-        <p>Welcome to my projects page! Here are some of the things I've been working on:</p>
+      <!-- PROFILE CARD -->
+      <section class="profile-card">
+        <h1 class="name">Rasheed</h1>
+        <p class="bio">18 y/o • AI & Flask Learner</p>
 
-        <div class="projects-grid">
-          <!-- Project Card -->
-          <div class="project-card">
-            <h2>Flask Authenticator</h2>
-            <p>A Flask app for user authentication with secure login and session management.</p>
-            <div class="project-links">
-              <a href="https://github.com/rashwab/flask" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-              <a href="#" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-            </div>
-          </div>
-
-          <!-- You can duplicate this card for more projects -->
+        <div class="meta">
+          <span><i class="fas fa-location-dot"></i> UK</span>
+          <span><i class="fas fa-comment"></i> Open to chat</span>
         </div>
 
+        <div class="status">
+          <span class="dot"></span>
+          <span id="time">Loading UK time…</span>
+        </div>
+
+        <div class="socials">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <span class="discord">
+            <i class="fab fa-discord"></i>
+            <span class="discord-name">rashwab</span>
+          </span>
+        </div>
+      </section>
+
+      <!-- SPOTIFY WIDGET -->
+       <br>
+      <section class="widget-card">
+        <div class="widget-header">
+          <i class="fab fa-spotify"></i>
+          <h3>Spotify</h3>
+        </div>
+
+        <div class="widget-body" id="spotify">
+          <i class="fas fa-music"></i>
+          <p>Loading Spotify…</p>
+        </div>
       </section>
 
     </main>
@@ -55,5 +82,8 @@
     </footer>
 
   </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
