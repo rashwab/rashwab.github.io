@@ -1,59 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects — Rasheed</title>
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-  <div class="container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects — Rasheed</title>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-      <h2 class="logo">RL</h2>
-      <ul class="nav-links">
-        <li><a href="index.html">home</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="Projects.html">projects</a></li>
-      </ul>
-    </nav>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-    <!-- MAIN CONTENT -->
-    <main class="main">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <h2 class="logo">RL</h2>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+        </ul>
+      </nav>
 
-      <section class="projects-section">
-        <h1>Projects</h1>
-        <p>Welcome to my projects page! Here are some of the things I've been working on:</p>
+      <!-- MAIN CONTENT -->
+      <main class="main">
+        <section class="projects-section">
+          <h1>Projects</h1>
+          <p>
+            Welcome to my projects page! Here are some of the things I've been
+            working on:
+          </p>
 
-        <div class="projects-grid">
-          <!-- Project Card -->
-          <div class="project-card">
-            <h2>Flask Authenticator</h2>
-            <p>A Flask app for user authentication with secure login and session management.</p>
-            <div class="project-links">
-              <a href="https://github.com/rashwab/flask" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-              <a href="#" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
+          <div class="projects-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+              <div class="project-preview">
+                <img
+                  src="Screenshot_26.png"
+                  alt="Flask Authenticator Screenshot"
+                />
+              </div>
+              <div class="project-info">
+                <h2 class="project-title">Flask Authenticator</h2>
+                <p class="project-description">
+                  A Flask app for user authentication with secure login and
+                  session management.
+                </p>
+                <a
+                  href="https://github.com/rashwab/flask"
+                  target="_blank"
+                  class="btn-view"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a
+                  href="https://flask-ba1c.onrender.com"
+                  target="_blank"
+                  class="btn-view"
+                >
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+              <div class="project-preview">
+                <img src="Screenshot_27.png" alt="DashboardPro Screenshot" />
+              </div>
+              <div class="project-info">
+                <h2 class="project-title">DashboardPro</h2>
+                <p class="project-description">
+                  A Flask-based dashboard displaying KPIs, tasks, messages, and
+                  more using SQLite or Excel fallback.
+                </p>
+                <a
+                  href="https://github.com/rashwab/DashboardPro-"
+                  target="_blank"
+                  class="btn-view"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a
+                  href="https://dashboardpro-abe5.onrender.com/dashboard"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-view"
+                >
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
             </div>
           </div>
+        </section>
+      </main>
 
-          <!-- You can duplicate this card for more projects -->
-        </div>
-
-      </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <p>© 2026 RashwabL</p>
-    </footer>
-
-  </div>
-</body>
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p>© 2026 RashwabL</p>
+      </footer>
+    </div>
+  </body>
 </html>

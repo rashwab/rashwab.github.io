@@ -1,89 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rasheed — Frontend Dev</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rasheed — Frontend Dev</title>
 
-  <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-  <link rel="stylesheet" href="index.css" />
-</head>
-<body>
-  <div class="container">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="index.css" />
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-      <h2 class="logo">RL</h2>
-      <ul class="nav-links">
-        <li><a href="index.html">home</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="Projects.html">projects</a></li>
-      </ul>
-    </nav>
+    <!-- Smooth Scrolling -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
 
-    <!-- MAIN CONTENT -->
-    <main class="main">
+      /* Hero typed effect */
+      #typed {
+        color: var(--accent);
+        font-weight: 600;
+      }
 
-      <!-- PROFILE CARD -->
-      <section class="profile-card">
-        <h1 class="name">Rasheed</h1>
-        <p class="bio">18 y/o • AI & Flask Learner</p>
+      /* Hero social icons */
+      .hero-socials {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+      .hero-socials a {
+        color: var(--accent);
+        font-size: 20px;
+        transition: color 0.3s, transform 0.3s;
+      }
+      .hero-socials a:hover {
+        color: #f5f5f5;
+        transform: scale(1.2);
+      }
 
-        <div class="meta">
-          <span><i class="fas fa-location-dot"></i> UK</span>
-          <span><i class="fas fa-comment"></i> Open to chat</span>
-        </div>
+      /* Fade-in sections */
+      .main > section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+      .main > section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <h2 class="logo">RL</h2>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
 
-        <div class="status">
-          <span class="dot"></span>
-          <span id="time">Loading UK time…</span>
-        </div>
+      <!-- MAIN CONTENT -->
+      <main class="main">
+        <!-- HERO SECTION -->
+        <section class="hero-card">
+          <h1>Hi, I'm Rasheed</h1>
+          <p>I build <span id="typed">AI web apps</span></p>
 
-        <div class="socials">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <span class="discord">
-            <i class="fab fa-discord"></i>
-            <span class="discord-name">rashwab</span>
-          </span>
-        </div>
-      </section>
+          <!-- Social Icons -->
+          <div class="hero-socials">
+            <a href="https://github.com/rashwab" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://linkedin.com/in/rasheed" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://twitter.com/rasheed" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
 
-      <!-- SPOTIFY WIDGET -->
-       <br>
-      <section class="widget-card">
-        <div class="widget-header">
-          <i class="fab fa-spotify"></i>
-          <h3>Spotify</h3>
-        </div>
+          <a href="#featured-projects" class="btn-projects">See My Projects</a>
+        </section>
 
-        <div class="widget-body" id="spotify">
-          <i class="fas fa-music"></i>
-          <p>Loading Spotify…</p>
-        </div>
-      </section>
+        <!-- FEATURED PROJECTS -->
+        <section id="featured-projects" class="projects-preview">
+          <h2>Featured Projects</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-preview">
+                <img src="Screenshot_26.png" alt="Flask Authenticator" />
+              </div>
+              <div class="project-info">
+                <h3>Flask Authenticator</h3>
+                <p>Secure login and session management with Flask.</p>
+                <a
+                  href="https://github.com/rashwab/flask"
+                  target="_blank"
+                  class="btn-view"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#" target="_blank" class="btn-view">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
 
-    </main>
+            <div class="project-card">
+              <div class="project-preview">
+                <img src="Screenshot_27.png" alt="DashboardPro" />
+              </div>
+              <div class="project-info">
+                <h3>DashboardPro</h3>
+                <p>
+                  Interactive KPI dashboard with Flask & SQLite/Excel fallback.
+                </p>
+                <a
+                  href="https://github.com/rashwab/DashboardPro-"
+                  target="_blank"
+                  class="btn-view"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a
+                  href="https://dashboardpro-abe5.onrender.com/dashboard"
+                  target="_blank"
+                  class="btn-view"
+                >
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <p>© 2026 RashwabL</p>
-    </footer>
+        <!-- SPOTIFY WIDGET -->
+        <section class="widget-card">
+          <div class="widget-header">
+            <i class="fab fa-spotify"></i>
+            <h3>Spotify</h3>
+          </div>
+          <div class="widget-body" id="spotify">
+            <i class="fas fa-music"></i>
+            <p>Loading Spotify…</p>
+          </div>
+        </section>
+      </main>
 
-  </div>
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p>© 2026 RashwabL</p>
+      </footer>
+    </div>
 
-  <!-- JS -->
-  <script src="script.js"></script>
-</body>
+    <!-- JS -->
+    <script>
+      // Hero typed effect
+      const skills = ["AI web apps", "Flask dashboards", "Interactive UIs"];
+      let i = 0,
+        j = 0,
+        isDeleting = false,
+        current = "";
+      const typedEl = document.getElementById("typed");
+      function type() {
+        if (i < skills.length) {
+          if (!isDeleting && j <= skills[i].length) {
+            current = skills[i].substring(0, j++);
+            typedEl.textContent = current;
+            setTimeout(type, 150);
+          } else if (isDeleting && j >= 0) {
+            current = skills[i].substring(0, j--);
+            typedEl.textContent = current;
+            setTimeout(type, 100);
+          } else {
+            isDeleting = !isDeleting;
+            if (!isDeleting) i = (i + 1) % skills.length;
+            setTimeout(type, 1000);
+          }
+        }
+      }
+      type();
+
+      // Scroll fade-in effect
+      const sections = document.querySelectorAll(".main > section");
+      window.addEventListener("scroll", () => {
+        sections.forEach((sec) => {
+          const top = sec.getBoundingClientRect().top;
+          if (top < window.innerHeight - 100) sec.classList.add("visible");
+        });
+      });
+    </script>
+  </body>
 </html>

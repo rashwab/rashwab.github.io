@@ -1,59 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me — Rasheed</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
     <div class="container">
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <h2 class="logo">RL</h2>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
 
-        <!-- NAVBAR -->
-        <nav class="navbar">
-            <h2 class="logo">RL</h2>
-            <ul class="nav-links">
-                <li><a href="index.html">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="Projects.html">projects</a></li>
-            </ul>
-        </nav>
+      <!-- ABOUT ME SECTION -->
+      <section class="about-card">
+        <h1>About Me</h1>
+        <p>
+          Hello! I’m <strong>Rasheed</strong>, an 18-year-old AI & Flask
+          enthusiast. I enjoy building projects that combine Python, web
+          development, and automation. Currently exploring Flask, APIs, and
+          frontend design to create clean and interactive web apps.
+        </p>
 
-        <!-- ABOUT ME SECTION -->
-        <section class="about-card">
-            <h1>About Me</h1>
-            <p>Hello! I’m <strong>Rasheed</strong>, an 18-year-old AI & Flask enthusiast. I enjoy building projects that combine Python, web development, and automation. Currently exploring Flask, APIs, and frontend design to create clean and interactive web apps.</p>
-            
-            <h2>Skills & Interests</h2>
-            <ul>
-                <li>Python & Flask web development</li>
-                <li>Frontend design with HTML, CSS & JS</li>
-                <li>APIs & automation projects</li>
-                <li>Artificial Intelligence & Machine Learning</li>
-            </ul>
+        <h2>Skills & Interests</h2>
+        <ul>
+          <li><i class="fas fa-code"></i> Python & Flask web development</li>
+          <li>
+            <i class="fas fa-laptop-code"></i> Frontend design with HTML, CSS &
+            JS
+          </li>
+          <li><i class="fas fa-robot"></i> APIs & automation projects</li>
+          <li>
+            <i class="fas fa-brain"></i> Artificial Intelligence & Machine
+            Learning
+          </li>
+        </ul>
 
-            <h2>Location & Availability</h2>
-            <p>Based in the <strong>UK</strong>. Always open to chat about tech, collaborations, or learning new things!</p>
+        <h2>Location & Availability</h2>
+        <p>
+          Based in the <strong>UK</strong>. Always open to chat about tech,
+          collaborations, or learning new things!
+        </p>
 
-            <h2>My Hobbies</h2>
-            <ul>
-                <li>Creating content</li>
-                <li>Playing video games</li>
-                <li>Watching movies and TV shows</li>
-                <li>Learning new programming languages</li>
-            </ul>
+        <h2>My Hobbies</h2>
+        <ul>
+          <li><i class="fas fa-video"></i> Creating content</li>
+          <li><i class="fas fa-gamepad"></i> Playing video games</li>
+          <li><i class="fas fa-film"></i> Watching movies and TV shows</li>
+          <li>
+            <i class="fas fa-book"></i> Learning new programming languages
+          </li>
+        </ul>
 
-            <!-- Cat Picture -->
-            <div class="about-image">
-                <img src="images/cat.jpg" alt="My Cat">
-            </div>
-        </section>
+        <!-- Profile/Cat Image -->
+        <div class="about-image">
+          <img src="images/cat.jpg" alt="My Cat" />
+        </div>
+      </section>
 
-        <!-- FOOTER -->
-        <footer class="footer">
-            <p>© 2026 RashwabL</p>
-        </footer>
-
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p>© 2026 RashwabL</p>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
