@@ -5,62 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rasheed — Frontend Dev</title>
 
-    <!-- Fonts & Icons -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <!-- Stylesheet -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="index.css" />
-
-    <!-- Smooth Scrolling -->
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-
-      /* Hero typed effect */
-      #typed {
-        color: var(--accent);
-        font-weight: 600;
-      }
-
-      /* Hero social icons */
-      .hero-socials {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        margin-bottom: 20px;
-      }
-      .hero-socials a {
-        color: var(--accent);
-        font-size: 20px;
-        transition: color 0.3s, transform 0.3s;
-      }
-      .hero-socials a:hover {
-        color: #f5f5f5;
-        transform: scale(1.2);
-      }
-
-      /* Fade-in sections */
-      .main > section {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
-      }
-      .main > section.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    </style>
   </head>
+
   <body>
     <div class="container">
       <!-- NAVBAR -->
@@ -75,85 +37,107 @@
 
       <!-- MAIN CONTENT -->
       <main class="main">
-        <!-- HERO SECTION -->
+        <!-- HERO -->
         <section class="hero-card">
           <h1>Hi, I'm Rasheed</h1>
           <p>I build <span id="typed">AI web apps</span></p>
 
-          <!-- Social Icons -->
+          <!-- Socials -->
           <div class="hero-socials">
-            <a href="https://github.com/rashwab" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a href="https://linkedin.com/in/rasheed" target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a href="https://twitter.com/rasheed" target="_blank"
-              ><i class="fab fa-twitter"></i
-            ></a>
+            <a href="https://github.com/rashwab" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/rasheed" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/rasheed" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
           </div>
 
-          <a href="#featured-projects" class="btn-projects">See My Projects</a>
+          <a href="#featured-projects" class="btn-projects">
+            See My Projects
+          </a>
         </section>
 
-        <!-- FEATURED PROJECTS -->
+        <!-- PROJECTS -->
         <section id="featured-projects" class="projects-preview">
           <h2>Featured Projects</h2>
+
           <div class="projects-grid">
+            <!-- PROJECT 1 -->
             <div class="project-card">
               <div class="project-preview">
-                <img src="Screenshot_26.png" alt="Flask Authenticator" />
+                <img
+                  src="Screenshot_26.png"
+                  alt="Flask Authenticator"
+                />
               </div>
+
               <div class="project-info">
                 <h3>Flask Authenticator</h3>
                 <p>Secure login and session management with Flask.</p>
-                <a
-                  href="https://github.com/rashwab/flask"
-                  target="_blank"
-                  class="btn-view"
-                >
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="#" target="_blank" class="btn-view">
-                  <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
+
+                <div>
+                  <a
+                    href="https://github.com/rashwab/flask"
+                    target="_blank"
+                    class="btn-view"
+                  >
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+
+                  <a href="#" class="btn-view">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                </div>
               </div>
             </div>
 
+            <!-- PROJECT 2 (UPDATED IMAGE) -->
             <div class="project-card">
               <div class="project-preview">
-                <img src="Screenshot_27.png" alt="DashboardPro" />
+                <img
+                  src="Screenshot_20260115_211303_com_android_chrome_ChromeTabbedActivity.jpg"
+                  alt="DashboardPro"
+                />
               </div>
+
               <div class="project-info">
                 <h3>DashboardPro</h3>
                 <p>
                   Interactive KPI dashboard with Flask & SQLite/Excel fallback.
                 </p>
-                <a
-                  href="https://github.com/rashwab/DashboardPro-"
-                  target="_blank"
-                  class="btn-view"
-                >
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-                <a
-                  href="https://dashboardpro-abe5.onrender.com/dashboard"
-                  target="_blank"
-                  class="btn-view"
-                >
-                  <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
+
+                <div>
+                  <a
+                    href="https://github.com/rashwab/DashboardPro-"
+                    target="_blank"
+                    class="btn-view"
+                  >
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+
+                  <a
+                    href="https://dashboardpro-abe5.onrender.com/dashboard"
+                    target="_blank"
+                    class="btn-view"
+                  >
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- SPOTIFY WIDGET -->
+        <!-- SPOTIFY -->
         <section class="widget-card">
           <div class="widget-header">
             <i class="fab fa-spotify"></i>
             <h3>Spotify</h3>
           </div>
+
           <div class="widget-body" id="spotify">
             <i class="fas fa-music"></i>
             <p>Loading Spotify…</p>
@@ -169,38 +153,47 @@
 
     <!-- JS -->
     <script>
-      // Hero typed effect
+      // Typed text effect
       const skills = ["AI web apps", "Flask dashboards", "Interactive UIs"];
       let i = 0,
         j = 0,
-        isDeleting = false,
-        current = "";
+        isDeleting = false;
+
       const typedEl = document.getElementById("typed");
+
       function type() {
-        if (i < skills.length) {
-          if (!isDeleting && j <= skills[i].length) {
-            current = skills[i].substring(0, j++);
-            typedEl.textContent = current;
-            setTimeout(type, 150);
-          } else if (isDeleting && j >= 0) {
-            current = skills[i].substring(0, j--);
-            typedEl.textContent = current;
-            setTimeout(type, 100);
-          } else {
-            isDeleting = !isDeleting;
-            if (!isDeleting) i = (i + 1) % skills.length;
-            setTimeout(type, 1000);
+        const current = skills[i];
+
+        if (!isDeleting) {
+          typedEl.textContent = current.substring(0, j++);
+          if (j > current.length) {
+            isDeleting = true;
+            setTimeout(type, 1200);
+            return;
+          }
+        } else {
+          typedEl.textContent = current.substring(0, j--);
+          if (j < 0) {
+            isDeleting = false;
+            i = (i + 1) % skills.length;
           }
         }
+
+        setTimeout(type, isDeleting ? 80 : 120);
       }
+
       type();
 
-      // Scroll fade-in effect
+      // Scroll reveal
       const sections = document.querySelectorAll(".main > section");
       window.addEventListener("scroll", () => {
-        sections.forEach((sec) => {
-          const top = sec.getBoundingClientRect().top;
-          if (top < window.innerHeight - 100) sec.classList.add("visible");
+        sections.forEach((section) => {
+          if (
+            section.getBoundingClientRect().top <
+            window.innerHeight - 100
+          ) {
+            section.classList.add("visible");
+          }
         });
       });
     </script>
