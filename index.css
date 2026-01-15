@@ -354,3 +354,53 @@ a {
   flex-direction: column;
   justify-content: space-between;
 }
+/* =======================
+   GLOBAL BEHAVIOR
+======================= */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =======================
+   HERO TYPED EFFECT
+======================= */
+#typed {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* =======================
+   HERO SOCIAL ICONS
+======================= */
+.hero-socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.hero-socials a {
+  color: var(--accent);
+  font-size: 20px;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.hero-socials a:hover {
+  color: var(--text);
+  transform: scale(1.2);
+}
+
+/* =======================
+   FADE-IN ANIMATION
+======================= */
+.main > section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.main > section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
