@@ -26,51 +26,86 @@
         </ul>
       </nav>
 
-      <!-- ABOUT ME SECTION -->
-      <section class="about-card">
-        <h1>About Me</h1>
-        <p>
-          Hello! I’m <strong>Rasheed</strong>, an 18-year-old AI & Flask
-          enthusiast. I enjoy building projects that combine Python, web
-          development, and automation. Currently exploring Flask, APIs, and
-          frontend design to create clean and interactive web apps.
-        </p>
+      <main class="main">
+        <!-- ABOUT HERO -->
+        <section class="hero-card visible">
+          <h1>About Me</h1>
+          <p>
+            Hello! I’m <strong>Rasheed</strong>, an 18-year-old
+            <span id="typed">AI & Flask Enthusiast</span>.
+            I enjoy building projects that blend Python, automation,
+            and clean frontend design.
+          </p>
 
-        <h2>Skills & Interests</h2>
-        <ul>
-          <li><i class="fas fa-code"></i> Python & Flask web development</li>
-          <li>
-            <i class="fas fa-laptop-code"></i> Frontend design with HTML, CSS &
-            JS
-          </li>
-          <li><i class="fas fa-robot"></i> APIs & automation projects</li>
-          <li>
-            <i class="fas fa-brain"></i> Artificial Intelligence & Machine
-            Learning
-          </li>
-        </ul>
+          <div class="hero-socials">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+          </div>
+        </section>
 
-        <h2>Location & Availability</h2>
-        <p>
-          Based in the <strong>UK</strong>. Always open to chat about tech,
-          collaborations, or learning new things!
-        </p>
+        <!-- SKILLS -->
+        <section class="widget-card visible">
+          <div class="widget-header">
+            <i class="fas fa-code"></i>
+            <h3>Skills & Interests</h3>
+          </div>
+          <div class="widget-body">
+            <ul>
+              <li>Python & Flask web development</li>
+              <li>HTML, CSS & JavaScript frontend design</li>
+              <li>APIs & automation projects</li>
+              <li>Artificial Intelligence & Machine Learning</li>
+            </ul>
+          </div>
+        </section>
 
-        <h2>My Hobbies</h2>
-        <ul>
-          <li><i class="fas fa-video"></i> Creating content</li>
-          <li><i class="fas fa-gamepad"></i> Playing video games</li>
-          <li><i class="fas fa-film"></i> Watching movies and TV shows</li>
-          <li>
-            <i class="fas fa-book"></i> Learning new programming languages
-          </li>
-        </ul>
+        <!-- LOCATION -->
+        <section class="widget-card visible">
+          <div class="widget-header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Location & Availability</h3>
+          </div>
+          <div class="widget-body">
+            <p>
+              Based in the <strong>UK</strong>.  
+              Always open to chatting about tech, collaborating,
+              or learning something new.
+            </p>
+          </div>
+        </section>
 
-        <!-- Profile/Cat Image -->
-        <div class="about-image">
-          <img src="images/cat.jpg" alt="My Cat" />
-        </div>
-      </section>
+        <!-- HOBBIES -->
+        <section class="widget-card visible">
+          <div class="widget-header">
+            <i class="fas fa-heart"></i>
+            <h3>Hobbies</h3>
+          </div>
+          <div class="widget-body">
+            <ul>
+              <li><i class="fas fa-video"></i> Creating content</li>
+              <li><i class="fas fa-gamepad"></i> Playing video games</li>
+              <li><i class="fas fa-film"></i> Watching movies & TV shows</li>
+              <li><i class="fas fa-book"></i> Learning new technologies</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- IMAGE -->
+        <section class="widget-card visible">
+          <div class="widget-header">
+            <i class="fas fa-camera"></i>
+            <h3>Just for Fun</h3>
+          </div>
+          <div class="widget-body" style="justify-content:center;">
+            <img
+              src="images/cat.jpg"
+              alt="My Cat"
+              style="width:100%; border-radius:14px;"
+            />
+          </div>
+        </section>
+      </main>
 
       <!-- FOOTER -->
       <footer class="footer">
